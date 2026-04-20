@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.4.1 - 2026-04-20
+
+- Fixed GitHub Actions package install failures by upgrading packaging tools
+  and installing with `--no-build-isolation`.
+- Disabled automatic PyPI publishing on GitHub release until Trusted Publishing
+  is configured, preventing repeated publish-failure emails.
+
 ## 0.4.0 - 2026-04-20
 
 - Renamed project and distribution to `PyQueryX`.

@@ -1,15 +1,14 @@
 [build-system]
-requires = ["setuptools>=77"]
+requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "PyQueryX"
-version = "0.4.0"
+version = "0.4.1"
 description = "A friendly Python SQL toolkit with simple querying, config helpers, and DB-API connectivity."
 readme = "README.md"
 requires-python = ">=3.8"
-license = "MIT"
-license-files = ["LICENSE"]
+license = { file = "LICENSE" }
 authors = [
     { name = "srinjan93306-ai" }
 ]
@@ -17,6 +16,7 @@ keywords = ["sql", "sqlite", "postgres", "mysql", "oracle", "database", "db-api"
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3 :: Only",
     "Programming Language :: Python :: 3.8",

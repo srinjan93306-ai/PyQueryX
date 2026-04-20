@@ -310,7 +310,7 @@ class PyQueryXTests(unittest.TestCase):
         self.assertIs(pyqueryx_module.connect, connect)
         self.assertIs(ezsql_module.connect, connect)
         self.assertIs(ezsql_legacy_module.connect, connect)
-        self.assertEqual(pyqueryx_module.__version__, "0.4.0")
+        self.assertEqual(pyqueryx_module.__version__, "0.4.1")
 
     def fail_import(self, blocked_name: str):
         return self.fail_imports({blocked_name})

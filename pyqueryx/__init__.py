@@ -10,7 +10,7 @@ from .config import DatabaseConfig, config_from_env
 from .connection import EZConnection, PyQueryXConnection
 from .exceptions import EZSQLError, PyQueryXError
 
-__version__ = "0.4.0"
+__version__ = "0.4.1"
 
 __all__ = [
     "connect",
