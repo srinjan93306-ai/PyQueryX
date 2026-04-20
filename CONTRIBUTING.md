@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for improving `ezsql`.
+Thanks for improving `EzSQL.py`.
 
 ## Development Setup
 
@@ -30,7 +30,7 @@ python -m unittest discover
 ## Run Syntax Checks
 
 ```bash
-python -m compileall ezsql tests examples
+python -m compileall EzSQL.py ezsql tests examples
 ```
 
 ## Project Principles

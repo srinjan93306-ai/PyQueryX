@@ -1,6 +1,7 @@
 """Tests for the ezsql public API."""
 
 import os
+import importlib
 import sqlite3
 import tempfile
 import unittest
@@ -107,6 +108,12 @@ class EZSQLTests(unittest.TestCase):
         self.assertTrue(is_select_query("SELECT * FROM users"))
         self.assertTrue(is_select_query("   select * from users"))
         self.assertFalse(is_select_query("INSERT INTO users VALUES (1)"))
+
+    def test_branded_import_module(self) -> None:
+        branded_module = importlib.import_module("EzSQL")
+
+        self.assertIs(branded_module.connect, connect)
+        self.assertEqual(branded_module.__version__, "0.3.0")
 
     def fail_import(self, blocked_name: str):
         original_import = __import__

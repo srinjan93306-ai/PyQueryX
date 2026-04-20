@@ -1,6 +1,6 @@
-# ezsql
+# EzSQL.py
 
-`ezsql` is a small Python library that wraps Python DB-API connections with a
+`EzSQL.py` is a small Python library that wraps Python DB-API connections with a
 simple interface. It hides cursors and routine transaction handling so beginners
 can run SQL with two methods: `query()` and `execute()`.
 
@@ -16,10 +16,10 @@ SQLite works with Python's standard library. Other databases use optional
 drivers:
 
 ```bash
-pip install "ezsql[postgres]"
-pip install "ezsql[mysql]"
-pip install "ezsql[oracle]"
-pip install "ezsql[all]"
+pip install "EzSQL.py[postgres]"
+pip install "EzSQL.py[mysql]"
+pip install "EzSQL.py[oracle]"
+pip install "EzSQL.py[all]"
 ```
 
 ## Quick Start
@@ -59,7 +59,7 @@ Supported database types:
 - `"oracle"`
 
 SQLite creates the database file automatically when it does not already exist.
-If `database` is omitted for SQLite, ezsql uses an in-memory database.
+If `database` is omitted for SQLite, EzSQL.py uses an in-memory database.
 
 For PostgreSQL and MySQL, `database` is the database name.
 
@@ -124,6 +124,22 @@ except EZSQLError as error:
     print(error)
 ```
 
+## Import Name
+
+The recommended Python import is lowercase:
+
+```python
+from ezsql import connect
+```
+
+For users who prefer the branded name, this also works:
+
+```python
+import EzSQL
+
+conn = EzSQL.connect("sqlite")
+```
+
 ## Development
 
 Run the test suite:
@@ -135,5 +151,5 @@ python -m unittest discover
 Run a syntax check:
 
 ```bash
-python -m compileall ezsql tests examples
+python -m compileall EzSQL.py ezsql tests examples
 ```

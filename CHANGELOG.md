@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.3.0 - 2026-04-20
+
+- Renamed the distribution/project display name to `EzSQL.py`.
+- Added `EzSQL.py` compatibility module for `import EzSQL`.
+- Kept the recommended Python package import as `from ezsql import connect`.
+
 ## 0.2.0 - 2026-04-20
 
 - Added MySQL support through `mysql-connector-python`.
