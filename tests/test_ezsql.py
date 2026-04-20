@@ -113,7 +113,7 @@ class EZSQLTests(unittest.TestCase):
         branded_module = importlib.import_module("EzSQL")
 
         self.assertIs(branded_module.connect, connect)
-        self.assertEqual(branded_module.__version__, "0.3.0")
+        self.assertEqual(branded_module.__version__, "0.3.1")
 
     def fail_import(self, blocked_name: str):
         original_import = __import__

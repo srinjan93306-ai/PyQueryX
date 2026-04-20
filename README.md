@@ -6,14 +6,29 @@ can run SQL with two methods: `query()` and `execute()`.
 
 ## Installation
 
+Install directly from GitHub:
+
+```bash
+pip install "git+https://github.com/srinjan93306-ai/EzSQL.py.git"
+```
+
+For optional database drivers from GitHub:
+
+```bash
+pip install "EzSQL.py[postgres] @ git+https://github.com/srinjan93306-ai/EzSQL.py.git"
+pip install "EzSQL.py[mysql] @ git+https://github.com/srinjan93306-ai/EzSQL.py.git"
+pip install "EzSQL.py[oracle] @ git+https://github.com/srinjan93306-ai/EzSQL.py.git"
+pip install "EzSQL.py[all] @ git+https://github.com/srinjan93306-ai/EzSQL.py.git"
+```
+
 For local development:
 
 ```bash
 pip install -e .
 ```
 
-SQLite works with Python's standard library. Other databases use optional
-drivers:
+SQLite works with Python's standard library. After publishing to PyPI, these
+optional extras can be installed with:
 
 ```bash
 pip install "EzSQL.py[postgres]"
@@ -126,7 +141,8 @@ except EZSQLError as error:
 
 ## Import Name
 
-The recommended Python import is lowercase:
+After installation, users can import the library with the stable lowercase
+package name:
 
 ```python
 from ezsql import connect

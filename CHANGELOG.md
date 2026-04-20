@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.3.1 - 2026-04-20
+
+- Updated package metadata and README links for the renamed GitHub repository.
+- Added direct GitHub installation instructions for other users.
+
 ## 0.3.0 - 2026-04-20
 
 - Renamed the distribution/project display name to `EzSQL.py`.
