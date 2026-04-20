@@ -2,6 +2,10 @@ name: Publish
 
 on:
   workflow_dispatch:
+    inputs:
+      confirm:
+        description: "Type publish to upload PyQueryX to PyPI"
+        required: true
 
 permissions:
   contents: read
@@ -11,6 +15,7 @@ jobs:
   publish:
     name: Publish to PyPI
     runs-on: ubuntu-latest
+    if: ${{ github.event.inputs.confirm == 'publish' }}
 
     steps:
       - name: Check out repository
@@ -26,6 +31,9 @@ jobs:
 
       - name: Build distributions
         run: python -m build --no-isolation
+
+      - name: List distributions
+        run: ls -la dist
 
       - name: Publish distributions to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1

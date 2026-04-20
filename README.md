@@ -185,5 +185,5 @@ Use `assets/pyqueryx-social-preview.png` as the GitHub social preview image.
 ## PyPI Publishing
 
 This project includes a GitHub Actions workflow for PyPI Trusted Publishing.
-After configuring the trusted publisher on PyPI, publish a GitHub release to
-upload the package automatically.
+After configuring the trusted publisher on PyPI, run the `Publish` workflow
+manually from GitHub Actions and type `publish` when prompted.
