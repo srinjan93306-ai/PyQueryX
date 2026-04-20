@@ -8,7 +8,7 @@ from typing import Any, Dict, Optional
 from .connection import EZConnection
 from .exceptions import EZSQLError
 
-__version__ = "0.3.2"
+__version__ = "0.3.3"
 
 __all__ = ["connect", "EZConnection", "EZSQLError", "__version__"]
 
