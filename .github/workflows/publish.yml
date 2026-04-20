@@ -7,15 +7,17 @@ on:
         description: "Type publish to upload PyQueryX to PyPI"
         required: true
 
-permissions:
-  contents: read
-  id-token: write
-
 jobs:
   publish:
     name: Publish to PyPI
     runs-on: ubuntu-latest
-    if: ${{ github.event.inputs.confirm == 'publish' }}
+    if: ${{ github.event.inputs.confirm == 'publish' && github.ref == 'refs/heads/main' }}
+    environment:
+      name: pypi
+      url: https://pypi.org/project/PyQueryX/
+    permissions:
+      contents: read
+      id-token: write
 
     steps:
       - name: Check out repository
@@ -37,3 +39,6 @@ jobs:
 
       - name: Publish distributions to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          print-hash: true
+          verbose: true

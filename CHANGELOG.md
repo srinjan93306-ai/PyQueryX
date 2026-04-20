@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file.
 - Limited the test workflow to `main` pushes and pull requests so release tags
   do not trigger duplicate failure emails.
 - Made PyPI publishing manual-only with an explicit confirmation input.
+- Added the `pypi` GitHub environment to match PyPI Trusted Publishing setup.
 
 ## 0.4.1 - 2026-04-20
 
