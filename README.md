@@ -177,21 +177,3 @@ Run syntax checks:
 ```bash
 python -m compileall PyQueryX.py EzSQL.py pyqueryx ezsql tests examples
 ```
-
-## Repository Artwork
-
-Use `assets/pyqueryx-social-preview.png` as the GitHub social preview image.
-
-## PyPI Publishing
-
-This project includes a GitHub Actions workflow for PyPI Trusted Publishing.
-Configure the trusted publisher on PyPI with these fields:
-
-- PyPI project name: `PyQueryX`
-- Owner: `srinjan93306-ai`
-- Repository: `PyQueryX`
-- Workflow name: `publish.yml`
-- Environment name: `pypi`
-
-Then run the `Publish` workflow manually from GitHub Actions on the `main`
-branch and type `publish` when prompted.
